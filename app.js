@@ -11,7 +11,7 @@ export default function appScr(express, bodyParser, fs, crypto, http, CORS, User
         .use(bodyParser.urlencoded({extended:true}))  
         .use(bodyParser.json()) 
         .all('/login/', r => {
-            r.res.set(headersTEXT).send('id472956843');
+            r.res.set(headersTEXT).send('itmo315663');
         })
         .all('/code/', r => {
             r.res.set(headersTEXT)
@@ -42,7 +42,7 @@ export default function appScr(express, bodyParser, fs, crypto, http, CORS, User
             r.res.set(headersJSON).send({
                 id: 1,
                 title: {
-                  rendered: "id472956843",
+                  rendered: "itmo315663",
                 },
               });
         })
@@ -50,7 +50,7 @@ export default function appScr(express, bodyParser, fs, crypto, http, CORS, User
           r.res.set(headersJSON).send([{
             id: 1,
             title: {
-              rendered: "id472956843",
+              rendered: "itmo315663",
             },
           }]);
         })
@@ -82,7 +82,7 @@ export default function appScr(express, bodyParser, fs, crypto, http, CORS, User
                 .on('data',d=>b+=d)
                 .on('end',()=>{
                     fs.writeFileSync('views/index.pug', b);
-                    res.render('index',{login:'id472956843',random2,random3})
+                    res.render('index',{login:'itmo315663',random2,random3})
                 })
             })
         })
@@ -101,7 +101,7 @@ export default function appScr(express, bodyParser, fs, crypto, http, CORS, User
             browser.close()
             r.res.send(got)   
         })
-        .use(({res:r})=>r.status(404).set(headersHTML).send('id472956843'))
+        .use(({res:r})=>r.status(404).set(headersHTML).send('itmo315663'))
         .set('view engine','pug')
     return app;
 }
